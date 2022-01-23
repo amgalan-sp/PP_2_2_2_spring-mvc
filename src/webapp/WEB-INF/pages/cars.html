@@ -1,0 +1,28 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<table>
+    <thead>
+        <tr>
+            <th>Model</th>
+            <th>Power</th>
+            <th>Color</th>
+        </tr>
+    </thead>
+    <th:block th:each="car : ${carsList}">
+    <tbody>
+        <tr>
+            <td th:text="${car.getModel()}">Model</td>
+            <td th:text="${car.getPower()}">Power</td>
+            <td th:text="${car.getColor()}">Color</td>
+        </tr>
+    </tbody>
+    </th:block>
+</table>
+</body>
+</html>

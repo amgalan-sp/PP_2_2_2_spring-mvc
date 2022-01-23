@@ -1,5 +1,6 @@
 package web.controller;
 
+import model.Car;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,6 +14,7 @@ public class HelloController {
 
 	@GetMapping(value = "/")
 	public String printWelcome(ModelMap model) {
+
 		List<String> messages = new ArrayList<>();
 		messages.add("Hello!");
 		messages.add("I'm Spring MVC application");
